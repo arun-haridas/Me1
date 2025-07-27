@@ -10,140 +10,201 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  
-  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+   
   <style>
   body {
       font: 20px Montserrat, sans-serif;
       line-height: 1.8;
       color: #f5f6f7;
   }
-  p {font-size: 16px;}
-  .margin {margin-bottom: 45px;}
-  .bg-1 { 
-      background-color: #799659; /* Green */
-      color: #ffffff;
-  }
-  .bg-2 { 
-      background-color: #474e5d; /* Dark Blue */
-      color: #ffffff;
-  }
-  .bg-3 { 
-      background-color: #ffffff; /* White */
-      color: #555555;
-  }
-  .bg-4 { 
-      background-color: #2f2f2f; /* Black Gray */
-      color: #fff;
-  }
-  .container-fluid {
-      padding-top: 70px;
-      padding-bottom: 70px;
-  }
-  .navbar {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      border: 0;
-      border-radius: 0;
-      margin-bottom: 0;
-      font-size: 12px;
-      letter-spacing: 5px;
-  }
-  .navbar-nav  li a:hover {
-      color: #1abc9c !important;
-  }
-   ul {
-  list-style-type: none;
-}
+  body { padding-top: 60px; }
+        .timeline { position: relative; }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #dee2e6;
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px;
+        }
+        .timeline-item.left { left: 0; }
+        .timeline-item.right { left: 50%; }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: darkslategrey;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item.left::before { right: -10px; }
+        .timeline-item.right::before { left: -10px; }
+        .tech-icon {
+            font-size: 2rem;
+            margin: 10px;
+        }
 
   </style>
 </head>
 <body>
- 
-
-<!-- Navbar -->
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">On Maintainance Mode!</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Where</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- First Container -->
-<div class="container-fluid bg-1 text-center">
-  <h3 class="margin">Full Stack .Net Developer</h3>
-  <img src="img/Arun.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Arun" width="350" height="350">
-  <h3>Angular | Javascript | C# | Vue</h3>
-</div>
-
-<!-- Second Container -->
-<div class="container-fluid bg-2 text-center">
-  <h3 class="margin">About me</h3>
+<div class="container">
+    <header class="text-center mb-5">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.aURVZt8iIm9k7Q-vAKBoBgAAAA?w=138&h=150&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Arun Haridas" class="rounded-circle mb-3" width="150">
   
-  <p>I'am a hardcore developer ,able to work both frontend and backend application development.
-     I described myself as a full stack web developer who is proficient in modern web frameworks like 
-    angular 2.x,angularJs 1.x, typescript and 4+ yrs of experience in Microsoft related like asp net MVC ,Entity framework.
-    I have a sound knowledge in upcoming technologies like .net core and other open source development environments</p>
+        <h1>Arun Haridas</h1>
+        <p class="lead">Full Stack Developer</p>
 
-  
+        <p>I’m a Full Stack Developer with over 9 years of experience building scalable, secure, and user-friendly web applications. I’m currently based in the UK, working with Cognizant on Public sector projects. My journey started in India, where I earned my degree in Computer Applications and trained in .NET technologies at NIIT.
+
+            Over the years, I’ve worked across India, Saudi Arabia, and the UK, contributing to projects in sectors like education, insurance, ERP, and government services. I specialize in Microsoft technologies like ASP.NET Core, Entity Framework, and Azure PaaS, and I’m equally comfortable with modern JavaScript frameworks like Angular (2–16), Hapi.js, and TypeScript.
+            
+            Whether it’s designing reusable UI components, implementing secure authentication systems, or automating deployments with Azure DevOps and Jenkins, I love solving complex problems and delivering clean, maintainable code. When I’m not coding, I enjoy exploring new tech trends and refining my skills in cloud architecture and DevOps.</p>
+              
+    </header>
+
+    <section class="mb-5">
+        <h2><i class="fas fa-code"></i> Tech Stack</h2>
+        <div class="row text-center">
+            <div class="col-md-2"><i class="fab fa-js tech-icon" title="JavaScript"></i><p>JavaScript</p></div>
+            
+            <div class="col-md-2">
+                
+                <span class="fa-stack fa-1x" title="C#" style="margin: 10px;">
+                    <i class="fas fa-square fa-stack-2x "></i>
+                    <strong class="fa-stack-1x fa-inverse" style="font-size: 1.1em;">C#</strong>
+                    </span>
+                  <p>C#</p>
+            </div>
+            <div class="col-md-2">
+                
+<span class="fa-stack fa-1x" title="TypeScript" style="margin: 10px;">
+<i class="fas fa-square fa-stack-2x "></i>
+<strong class="fa-stack-1x fa-inverse" style="font-size: 1.1em;">TS</strong>
+</span>
+<p>Type Script</p>
+            </div>
+            <div class="col-md-2"><i class="fab fa-python tech-icon" title="Python"></i><p>Python</p></div>
+           <br>
+           
+           <div class="col-md-2"><i class="fab fa-angular tech-icon" title="Angular"></i><p>Angular</p></div>
+            <div class="col-md-2"><i class="fab fa-node tech-icon" title="Node.js"></i><p>Node.js</p></div>
+            <div class="col-md-2"><i class="fab fa-microsoft tech-icon" title=".NET"></i><p>.NET</p></div>
+            <div class="col-md-2"><i class="fas fa-database tech-icon" title="SQL Server"></i><p>SQL Server</p></div>
+            <div class="col-md-2"><i class="fas fa-cloud tech-icon" title="Azure"></i><p>Azure</p></div>
+            <div class="col-md-2"><i class="fab fa-git-alt tech-icon" title="Git"></i><p>Git</p></div>
+           
+            <!-- <div class="col-md-2"><i class="fab fa-docker tech-icon" title="Docker"></i><p>Docker</p></div>
+            <div class="col-md-2"><i class="fas fa-cogs tech-icon" title="DevOps"></i><p>DevOps</p></div>
+            <div class="col-md-2"><i class="fas fa-cloud tech-icon" title="Cloud Computing"></i><p>Cloud</p></div>
+            <div class="col-md-2"><i class="fas fa-lock tech-icon" title="Security"></i><p>Security</p></div>
+            <div class="col-md-2"><i class="fas fa-code tech-icon" title="Coding Standards"></i><p>Coding Standards</p></div>
+            <div class="col-md-2"><i class="fas fa-users tech-icon" title="Team Collaboration"></i><p>Team Collaboration</p></div>
+            <div class="col-md-2"><i class="fas fa-chart-line tech-icon" title="Performance Tuning"></i><p>Performance Tuning</p></div>
+            <div class="col-md-2"><i class="fas fa-project-diagram tech-icon" title="Project Management"></i><p>Project Management</p></div>
+            <div class="col-md-2"><i class="fas fa-comments tech-icon" title="Client Interaction"></i><p>Client Interaction</p></div>
+            <div class="col-md-2"><i class="fas fa-lightbulb tech-icon" title="Problem Solving"></i><p>Problem Solving</p></div>
+            <div class="col-md-2"><i class="fas fa-tasks tech-icon" title="Task Management"></i><p>Task Management</p></div>
+            <div class="col-md-2"><i class="fas fa-search tech-icon" title="Research & Development"></i><p>R&D</p></div>
+            <div class="col-md-2"><i class="fas fa-shield-alt tech-icon" title="Security Standards"></i><p>Security Standards</p></div>
+            <div class="col-md-2"><i class="fas fa-sync-alt tech-icon" title="Continuous Integration"></i><p>CI/CD</p></div>
+            <div class="col-md-2"><i class="fas fa-bug tech-icon" title="Debugging"></i><p>Debugging</p></div>
+            <div class="col-md-2"><i class="fas fa-file-alt tech-icon" title="Documentation"></i><p>Documentation</p></div>
+            <div class="col-md-2"><i class="fas fa-chart-bar tech-icon" title="Analytics"></i><p>Analytics</p></div>
+            <div class="col-md-2"><i class="fas fa-users tech-icon" title="Team Leadership"></i><p>Team Leadership</p></div>
+            <div class="col-md-2"><i class="fas fa-network-wired tech-icon" title="Networking"></i><p>Networking</p></div>
+            <div class="col-md-2"><i class="fas fa-mobile-alt tech-icon" title="Mobile Development"></i><p>Mobile Dev</p></div>
+            <div class="col-md-2"><i class="fas fa-palette tech-icon" title="UI/UX Design"></i><p>UI/UX Design</p></div>
+            <div class="col-md-2"><i class="fas fa-chart-pie tech-icon" title="Data Visualization"></i><p>Data Viz</p></div>
+            <div class="col-md-2"><i class="fas fa-certificate tech-icon" title="Certifications"></i><p>Certifications</p></div>
+            <div class="col-md-2"><i class="fas fa-globe tech-icon" title="International Experience"></i><p>Global Exp</p></div>
+            <div class="col-md-2"><i class="fas fa-graduation-cap tech-icon" title="Education"></i><p>Education</p></div>    -->
+        </div>
+    </section>
+
+    <section class="mb-5">
+
+        <h2><i class="fas fa-globe"></i> Professional Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <h5>Aug 2024 - Aug 2025</h5>
+                <p><strong>Cognizant UK - Manage your DfE Connect data</strong></p>
+                <ul>
+                    <li>Developed reusable UI components and frameworks for Angular forms</li>
+                    <li>Used CQRS pattern for performance and maintainability</li>
+                </ul>
+            </div>
+            <div class="timeline-item right">
+                <h5>Mar 2024 - May 2024</h5>
+                <p><strong>Cognizant UK - Blue tongue (DEFRA)</strong></p>
+                <ul>
+                    <li>Evaluated Azure blob storage and antivirus implementation</li>
+                    <li>Modified document generation workflows</li>
+                </ul>
+            </div>
+            <div class="timeline-item left">
+                <h5>Sept 2023 - Feb 2024</h5>
+                <p><strong>Cognizant UK - Manage Authorize Payments Service</strong></p>
+                <ul>
+                    <li>Implemented Domain-Driven Design and SSO</li>
+                    <li>Developed RBAC and automated IAM tasks</li>
+                </ul>
+            </div>
+            <div class="timeline-item right">
+                <h5>Oct 2021 - July 2023</h5>
+                <p><strong>Cognizant INDIA - MPIUA Portals</strong></p>
+                <ul>
+                    <li>Automated deployments with Jenkins</li>
+                    <li>Managed DTS packages lifecycle</li>
+                </ul>
+            </div>
+            <div class="timeline-item left">
+                <h5>June 2018 - Sept 2021</h5>
+                <p><strong>UST, INDIA - Nameplate Standardization</strong></p>
+                <ul>
+                    <li>Led project migration and developed production tools</li>
+                    <li>Client interaction and performance tuning</li>
+                </ul>
+            </div>
+            <div class="timeline-item right">
+                <h5>Jan 2016 - April 2018</h5>
+                <p><strong>Crescent East Business - Applica ERP</strong></p>
+                <ul>
+                    <li>End-to-end development and database design</li>
+                    <li>Requirement gathering and prototyping</li>
+                </ul>
+            </div>
+            <div class="timeline-item left">
+                <h5>May 2012 - Aug 2015</h5>
+                <p><strong>Login Solutions - CC&S</strong></p>
+                <ul>
+                    <li>Product management and stakeholder interaction</li>
+                    <li>Status reporting and review meetings</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <p><strong>Bachelor of Computer Application</strong> - MG University, Kottayam, India (2011)</p>
+        <p>Diploma in .NET Technologies - NIIT</p>
+    </section>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2025 Arun Haridas</p>
+    </footer>
 </div>
-
-<!-- Third Container (Grid) -->
-<div class="container-fluid bg-3 text-center">    
-  <h3 class="margin">Skills</h3><br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p><strong>Primary</strong></p>
-      <ul class="skill-ul">
-    <li>HTML5 | CSS3 | JavaScript/ES6</li>
-    <li>C# | .NET</li>
-    <li>PHP | SQL</li>
-  </ul>
-    </div>
-    <div class="col-sm-4"> 
-      <p><strong>Secondary</strong></p>
-    <ul class="skill-ul">  <li>Bootstrap | Foundation</li>
-    <li>TypeScript</li>
-    <li>Bower | Gulp | Yeoman | Webpack </li>
-    <li>jQuery | Angular 1.x| Angular 2.x | React </li>
-      </ul>
-    </div>
-    <div class="col-sm-4"> 
-      <p><strong>Others</strong></p>
-     <ul class="skill-ul"> <li>Node.js | npm | mongoDB</li>
-    <li>Jasmine | Potractor | Firebug | DevTools</li>
-    <li>Git | Github |Tfs</li>
-    <li>Atom | WebStorm | Visual Studio </li>
-   </ul>
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="container-fluid bg-4 text-center">
-  <p>2017</p> 
-</footer>
-<div id="particles-js"></div>
-
-<!-- stats - count particles -->
-<div class="count-particles">
-  <span class="js-count-particles">--</span> particles
-</div>
-  
-  
-
 </body>
 </html>
 
